@@ -133,6 +133,58 @@ admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/
 
 # 4. Create table and configure MySQL details in Spring Boot
 
+```sh
+admin@gw-mac employee % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.30 Homebrew
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| employee-schema    |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> use employee-schema;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> 
+mysql> 
+mysql> CREATE TABLE `employee-schema`.`employees` (`emp_id` int AUTO_INCREMENT,`first_name` varchar(255),`last_name` varchar(255),`email_id` varchar(255), PRIMARY KEY (emp_id));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+mysql> SHOW tables;
++---------------------------+
+| Tables_in_employee-schema |
++---------------------------+
+| employees                 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+mysql> exit
+Bye
+admin@gw-mac employee % 
+```
+
 
 # 5. Create the model class
 
