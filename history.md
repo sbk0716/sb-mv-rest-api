@@ -132,9 +132,8 @@ admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/
 ```
 
 # 4. Create table and configure MySQL details in Spring Boot
-
 ```sh
-admin@gw-mac employee % mysql -u root -p
+admin@gw-mac sb-mv-rest-api % mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 9
@@ -182,11 +181,18 @@ mysql> SHOW tables;
 mysql> 
 mysql> exit
 Bye
-admin@gw-mac employee % 
+admin@gw-mac sb-mv-rest-api % 
 ```
 
 
 # 5. Create the model class
+
+```sh
+admin@gw-mac sb-mvn-rest-api % touch employee/src/main/java/com/example/employee/model/Employee.java
+admin@gw-mac sb-mvn-rest-api % ls -l employee/src/main/java/com/example/employee/model/Employee.java
+-rw-r--r--  1 admin  staff  64 Aug 31 13:30 employee/src/main/java/com/example/employee/model/Employee.java
+admin@gw-mac sb-mvn-rest-api % 
+```
 
 
 # 6. Create the model class
