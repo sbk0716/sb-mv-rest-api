@@ -195,18 +195,25 @@ admin@gw-mac sb-mvn-rest-api %
 ```
 
 
-# 6. Create the model class
+# 6. Create the repository class
+
+```sh
+
+
+```
 
 
 
-# 7. Create the repository class
+# 7. Create the service class
 
 
-# 8. Create the repository class
+# 8. Create the controller class
+
+# 9. Create methods to perform CRUD operations
 
 
-# 9. Create the controller class
+# 10. Build the application
 
-# 10. Create the controller class
+
 
 
