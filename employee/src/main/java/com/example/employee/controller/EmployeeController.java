@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.employee.model.Employee;
 import com.example.employee.service.EmployeeService;
 
+// ADD
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
+
 @RestController
 @RequestMapping("/api")
 public class EmployeeController {
@@ -21,25 +25,36 @@ public class EmployeeController {
 
     // CREATE
     @RequestMapping(value="/employees", method=RequestMethod.POST)
-    public Employee createEmployee(@RequestBody Employee emp) {
-        return empService.createEmployee(emp);
+    public ResponseEntity<Employee> createEmployee(@RequestBody Employee emp) {
+        Employee resp = empService.createEmployee(emp);
+        return ResponseEntity.ok(resp);
     }
 
-    // READ
+    // READ(ALL)
     @RequestMapping(value="/employees", method=RequestMethod.GET)
     public List<Employee> readEmployees() {
         return empService.getEmployees();
     }
 
+    // READ
+    @RequestMapping(value="/employees/{empId}", method=RequestMethod.GET)
+    public ResponseEntity<Employee> readEmployee(@PathVariable(value = "empId") Long id) {
+        Employee resp = empService.getEmployee(id);
+        return ResponseEntity.ok(resp);
+    }
+
     // UPDATE
     @RequestMapping(value="/employees/{empId}", method=RequestMethod.PUT)
-    public Employee readEmployees(@PathVariable(value = "empId") Long id, @RequestBody Employee empDetails) {
-        return empService.updateEmployee(id, empDetails);
+    public ResponseEntity<Employee> updateEmployees(@PathVariable(value = "empId") Long id, @RequestBody Employee empDetails) {
+        Employee resp = empService.updateEmployee(id, empDetails);
+        return ResponseEntity.ok(resp);
     }
 
     // DELETE
     @RequestMapping(value="/employees/{empId}", method=RequestMethod.DELETE)
-    public void deleteEmployees(@PathVariable(value = "empId") Long id) {
+    public ResponseEntity<HttpStatus> deleteEmployees(@PathVariable(value = "empId") Long id) {
         empService.deleteEmployee(id);
+        ResponseEntity<HttpStatus> resp = new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return resp;
     }
 }
