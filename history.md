@@ -122,6 +122,18 @@ admin@gw-mac sb-mv-rest-api %
 
 # 3. Add sub-packages to the project
 
+```sh
+admin@gw-mac sb-mv-rest-api % mkdir employee/src/main/java/com/example/employee/controller
+admin@gw-mac sb-mv-rest-api % mkdir employee/src/main/java/com/example/employee/service
+admin@gw-mac sb-mv-rest-api % mkdir employee/src/main/java/com/example/employee/model
+admin@gw-mac sb-mv-rest-api % mkdir employee/src/main/java/com/example/employee/repository
+admin@gw-mac sb-mv-rest-api % 
+admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/controller/test.java
+admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/model/test.java
+admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/repository/test.java 
+admin@gw-mac sb-mv-rest-api % touch employee/src/main/java/com/example/employee/service/test.java
+```
+
 
 # 4. Create table and configure MySQL details in Spring Boot
 
