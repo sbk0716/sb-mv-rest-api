@@ -196,24 +196,25 @@ admin@gw-mac sb-mvn-rest-api %
 
 
 # 6. Create the repository class
-
 ```sh
-
-
+admin@gw-mac sb-mvn-rest-api % touch employee/src/main/java/com/example/employee/repository/EmployeeRepository.java
+admin@gw-mac sb-mvn-rest-api % ls -l employee/src/main/java/com/example/employee/repository/EmployeeRepository.java
+-rw-r--r--  1 admin  staff  0 Aug 31 14:44 employee/src/main/java/com/example/employee/repository/EmployeeRepository.java
+admin@gw-mac sb-mvn-rest-api % 
 ```
 
-
-
 # 7. Create the service class
-
+```sh
+admin@gw-mac sb-mvn-rest-api % touch employee/src/main/java/com/example/employee/service/EmployeeService.java      
+admin@gw-mac sb-mvn-rest-api % ls -l employee/src/main/java/com/example/employee/service/EmployeeService.java
+-rw-r--r--  1 admin  staff  0 Aug 31 15:23 employee/src/main/java/com/example/employee/service/EmployeeService.java
+admin@gw-mac sb-mvn-rest-api % 
+```
 
 # 8. Create the controller class
-
-# 9. Create methods to perform CRUD operations
-
-
-# 10. Build the application
-
-
-
-
+```sh
+admin@gw-mac sb-mvn-rest-api % touch employee/src/main/java/com/example/employee/controller/EmployeeController.java
+admin@gw-mac sb-mvn-rest-api % ls -l employee/src/main/java/com/example/employee/controller/EmployeeController.java
+-rw-r--r--  1 admin  staff  0 Aug 31 15:37 employee/src/main/java/com/example/employee/controller/EmployeeController.java
+admin@gw-mac sb-mvn-rest-api % 
+```
