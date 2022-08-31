@@ -1,1 +1,1 @@
-# sb-mv-rest-api
+# sb-mvn-rest-api
